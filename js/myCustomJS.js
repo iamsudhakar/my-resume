@@ -5,7 +5,7 @@ function myFunction() {
 today = new Date()
 start = new Date(2014,06,04) // remember this is equivalent to 07 04 2010
 //dates in js are counted from 0, so 06 is july
-doj = new Date (2020,08,01)
+doj = new Date (2024,01,01)
 
 function mn(date1,date2) {
     var diff = Math.floor(date1.getTime() - date2.getTime());
