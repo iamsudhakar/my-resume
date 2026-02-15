@@ -7,7 +7,7 @@ start = new Date(2014,06,04) // remember this is equivalent to 07 04 2010
 //dates in js are counted from 0, so 06 is july
 doj = new Date (2024,01,01)
 
-function mn(date1,date2) {
+function mn(date1,date2, flag) {
     var diff = Math.floor(date1.getTime() - date2.getTime());
     var day = 1000 * 60 * 60 * 24;
 
@@ -18,16 +18,18 @@ function mn(date1,date2) {
 
 	if (y == 0){
 	}else if(y == 1){
-		document.write(y +" year and ");
+		document.write(y +" year");
 	}else{
-		document.write(y +" years and ");
+		document.write(y +" years");
 	}
 	
-	if (m == 0){
-		document.write(m + " month");
-	}else if(m == 1){
-		document.write(m + " month");
-	}else{
-		document.write(m + " months");
+	if(flag){	
+		if (m == 0){
+			document.write("");
+		}else if(m == 1){
+			document.write(" and "+ m +"  month");
+		}else{
+			document.write(" and "+ m +"  months");
+		}
 	}
 }
